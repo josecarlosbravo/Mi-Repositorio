@@ -1,0 +1,96 @@
+/*todos los elemnetos de la pagina*/
+*{
+    font-family: Arial, Verdana;
+}
+
+p{
+    font-size: 20px;
+}
+
+/* ide con #*/
+#parrafo1{
+    color: #00FF00;
+    font-weight: bold; /*negrita*/
+    border: 2px double #ff0000;
+    /*
+    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-left: 20px;      margen de fuera
+    margin-right: 50px;
+    */
+    margin: 30px 50px 40px 20px;
+    
+    /*
+    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-left: 20px;      margen de dentro
+    padding-right: 50px;
+    */
+    padding: 20px;
+}
+
+/*clase con .*/
+.colorrojo{
+    color: rgb(255,0,0);
+}
+
+h1 , h2{
+    font: bold 30px Verdana;
+}
+
+header, section, footer, aside, nav, article{ /*poner varios elemento para combiarlos a la vez con las mismas opciones*/
+    display: block;
+}
+
+footer{
+    text-align: center;
+    clear: both;
+}
+
+/*#img{
+    width: 100%;
+}*/
+
+#video{
+    width:  600px;
+    height: 400px;
+}
+
+#audio{
+    width: 600px;
+    height: 300px;
+}
+
+footer a{ /*cambia lo que esta dentro de la etiqueta que pongamos antes*/
+    color: green;
+    text-decoration: none;
+    cursor: pointer; /*icono de la mano*/
+}
+
+nav ul li{
+    display: inline;
+    border: 3px dashed #ff0000;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px #000000;
+}
+
+nav ul li:hover{
+    background-color: red;
+}
+
+nav{
+    margin-bottom:  30px;
+}
+
+nav a{
+    text-decoration: none;
+}
+nav ol li{
+    border: 2px groove #ff00ff;
+}
+
+.botonactivo{
+    background-color: yellow;
+}

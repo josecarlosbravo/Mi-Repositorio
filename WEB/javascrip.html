@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Este texto es el título del documento</title>
+    <link rel="stylesheet" href="css/estilojs.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script src="scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>
+    /*$(document).ready(function() {
+    $('#example').DataTable( {
+        "ajax": "data/objects.txt",
+        "columns": [
+            { "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "extn" },
+            { "data": "start_date" },
+            { "data": "salary" }
+        ]
+    } );
+} );*/
+    </script>
+    <script>
+    //se crea la tabla 
+    /*var dataSet = [
+    [ "Javier", "3500", "100"],
+    [ "Fran", "2000", "200"],
+    [ "Ana", "2750", "100"]
+    ];*/
+    $(document).ready(function() {
+    $('#ejemplo').DataTable( {
+        data: ejem(), //llama a la funcion que contine los datos de la tabla
+        columns: [
+            { title: "Name" },
+            { title: "Salario" },
+            { title: "Horas" }
+        ]
+    } );
+    } );
+    </script>
+    <script>
+    //window.onload=mensaje; o mensaje(); llama a la funcion.
+    $(document).ready(function() {
+        $('#example').DataTable({
+            "order" : [[1, "desc"]], //oedena descendente la posicion del elemento dado
+            /*"paging" : false, //quita la paginacion
+            "info" : false, //quita la informacion 
+            "searching" : false, //quita el buscador
+            "scrollY" : "200px", tamaño del scroll en vertical
+            "scrollX : "200px", tamaño del scroll en horizontal
+            "scrollCollage" : true, actica la barra de navegacion
+            "paging" : false,
+            "columnDefs": [ para columnas
+            {
+                "targets": [ 1 ], //posicion del elemento
+                "visible": false, //oculta el elemento
+                "searchable": false //no se pueda buscar ne el buscador
+            }],
+            "language": {
+            "decimal": ",", añade una coma a los decimales
+            "thousands": "." añade a los miles un punto
+             },*/
+             
+            "language": {
+            "lengthMenu": "se muestra el tamaño a mostrar _MENU_ de empleado por paginas",
+            "zeroRecords": "no encuentra nada perdon",
+            "info": "estas en la pagina _PAGE_ de _PAGES_ ",
+            "infoEmpty": "No encuentra datos",
+            "infoFiltered": "(filtered from _MAX_ total records)"
+            }
+            /*
+            "url" : "",
+            "oPaginate" : {
+                "first" : "Primero",
+                "last" : "Ultimo",
+                "next" : "Siguiente",
+                "previous" "Anterior"
+            }
+            "oAria" : {
+                "sortAscending" : 
+                ""
+            }
+            
+            
+            
+            */
+        });
+    } );
+    </script>
+</head>
+<body>
+    <div id="principal">
+    <p onclick="alert('hizo clic!')">Hacer Clic</p>
+    <!--<p onmouseover="alert('usted paso por encima del parrafo')">No puede hacer clic</p>-->
+    <p onclick="mensaje();">No puede hacer clic</p>
+    <p id="parrafo1">Esto es un parrafo</p>
+    <p onclick="muestraTexto();">haz clic</p>
+    <br><br>
+    <p id="nombre">Jose Carlos</p>
+    <p id="apellidos">Bravo Chicano</p>
+    <p onclick="concatenaNombre();">recoge el nombre pulsando aqui</p>
+    <p id="nombrecompleto"></p>
+    <br><br>
+    <input id="numero1" type="number" name="numero1"><br>
+    <input id="numero2" type="number" name="numero2"><br>
+    <input onclick="sumar();" type="button" name="sumar" value="suma"><!--onclick="calculadora('suma')"-->
+    <input onclick="restar();" type="button" name="resta" value="resta"><!--onclick="calculadora('resta')"-->
+    <input onclick="multi();" type="button" name="multiplicacion" value="multiplicar"><!--onclick="calculadora('multiplicacion')"-->
+    <input onclick="dividir();" type="button" name="dividir" value="dividir"><!--onclick="calculadora('dividir')"-->
+    <input onclick="elevar();" type="button" name="elevar" value="elevar"><!--onclick="calculadora('elevarb')"-->
+    <input onclick="comprobar();" type="button" name="comprobar" value="comprobarPar">
+    <br>
+    <input id="resultado" type="text" name="resultado"><br>
+    <br><br>
+    <p onclick="arrayCoches();">Listado de coches</p>
+    <p id="listadocoches"></p>
+    <br><br>
+    <p onclick="peso();">pulsa aqui para ver personas con un peso superior a 80kg</p>
+    <p id="pesos"></p>
+    <br><br>
+    <p onclick="nota();">pulsa aqui para ver las notas</p>
+    <p id="notas"></p>
+    <br><br>
+    <p onclick="complejo();">PULSA AQUI</p>
+    <p id="empleados"></p>
+    <br><br>
+    <table id="example">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Sueldo</th>
+                <th>Horas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Javier</td>
+                <td>3500</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Fran</td>
+                <td>2000</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>2500</td>
+                <td>150</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <table id="ejemplo"></table>
+</div>
+</body>
+</html> 

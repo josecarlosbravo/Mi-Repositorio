@@ -1,0 +1,123 @@
+/*-webkit-margin-after: 0.6em; quitar margin por defecto de abajo
+-webkit-margin-before: 0.6em; quitar margin por defecto de arriba
+-webkit-margin-start: quitar margin por defecto izquierdo
+-webkit-margin-end: quitar margin por defecto derecho
+Solo para las listas
+*/
+
+/*todos los elemnetos de la pagina*/
+*{
+    font-family: Arial, Verdana;
+}
+
+p{
+    font-size: 20px;
+}
+
+/* ide con #*/
+#parrafo1{
+    color: #00FF00;
+    font-weight: bold; /*negrita*/
+    border: 2px double #ff0000;
+    /*
+    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-left: 20px;      margen de fuera
+    margin-right: 50px;
+    */
+    margin: 30px 50px 40px 20px;
+    
+    /*
+    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-left: 20px;      margen de dentro
+    padding-right: 50px;
+    */
+    padding: 20px;
+}
+
+/*clase con .*/
+.colorrojo{
+    color: rgb(255,0,0);
+}
+
+h1 , h2{
+    font: bold 40px Disney;
+    text-shadow: 5px 5px 8px #000000;
+}
+
+@font-face{
+    font-family: "Disney";
+    src: url("../fuente/fuente.ttf");
+}
+
+header, section, footer, aside, nav, article{ /*poner varios elemento para combiarlos a la vez con las mismas opciones*/
+    display: block;
+}
+
+footer{
+    text-align: center;
+    clear: both;
+}
+
+section{
+    background-color: #cccccc;
+    width: 70%;
+    float: left;
+    /*
+     *background: -webkit-linear-gradient(top, #000000, #00ff00); color que va cambiando a otro
+    background: -moz-linear-gradient(top, #000000, #00ff00);
+    outline: 2px dotted black; linea de fuera
+    */
+}
+
+aside{
+    background-color: #cc33aa;
+    width: 30%;
+    float: left;
+}
+
+footer a{ /*cambia lo que esta dentro de la etiqueta que pongamos antes*/
+    color: green;
+    text-decoration: none;
+    cursor: pointer; /*icono de la mano*/
+}
+
+nav ul li{
+    display: inline;
+    border: 3px dashed #ff0000;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px #000000;
+}
+
+nav ul li:hover{
+    background-color: red;
+}
+
+nav{
+    margin-bottom:  30px;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav ol li{
+    border: 2px groove #ff00ff;
+}
+
+.botonactivo{
+    background-color: yellow;
+}
+
+/*diseño movil*/
+@media only screen and (max-width: 800px){ /*cambiar el estilo por el tamaño de la pantallas*/
+    section, aside{
+        width: 100%;
+    }
+    nav ul li{
+        background: -webkit-linear-gradient(top, #000000, #00ff00);
+    }
+}
